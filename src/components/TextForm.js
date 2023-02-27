@@ -43,7 +43,7 @@ export default function TextForm(props) {
     <div className="container" style={{color: props.mode === 'dark' ?'white':'black'}}>
       <h1>Text Info</h1>
       <p>Number of word are {text.length}</p>
-      <p>Number of character are {text.match(/\S+/g).length}</p>
+      <p>Number of character are {text.match(/\S+/g)?.length}</p>
       <p>{0.008 * text.length} minutes you can read</p>
       <h1>Preview</h1>
       <p onClick={handleClick} style={{ color: active ? "black":"red" }}>{text}</p>

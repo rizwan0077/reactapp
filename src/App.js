@@ -1,10 +1,10 @@
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import { useState } from 'react';
 import Alert from './components/Alert';
-import { BrowserRouter as Router, Routes, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Switch, Route, Link } from "react-router-dom";
 
 
 function App() {
@@ -45,16 +45,17 @@ function App() {
 
   return (
     <>
-    <Router>
+    {/* <Router> */}
     <Navbar title="SofaWed" mode={mode} toggleMode={toggleMode} handleRadioChange={handleRadioChange}/>
     <Alert alert={alert} />
-        <Routes>
+    <TextForm showAlert={showAlert} heading="Enter text here to Analyze" mode={mode} />
+        {/* <Routes>
             <Route exact path="/about" element={<About />}>
             </Route>
             <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter text here to Analyze" mode={mode} />}>
             </Route>
         </Routes>
-    </Router>
+    </Router> */}
     </>
   );
 }
